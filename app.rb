@@ -32,10 +32,10 @@ post('/words/:id') do
   erb(:definition)
 end
 
-get('/newdef') do
-  # word = Word.find(params.fetch('id').to_i())
-  erb(:definition)
-end
+# get('/newdef') do
+#   # word = Word.find(params.fetch('id').to_i())
+#   erb(:definition)
+# end
 
 post('/newdef/:id') do
   @words = Word.all()

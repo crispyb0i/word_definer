@@ -2,9 +2,10 @@
 
 <ul>
   <% @word.definitions.each() do |definition| %>
-  <li><%= definition %></li>
+  <li><%= definition.definition() %></li>
   <% end %>
 </ul>
+
 
 <form action="/newdef/<%= @word.id %>" method="post">
   <label for="definition">New definition</label>
