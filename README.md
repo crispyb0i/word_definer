@@ -12,6 +12,7 @@
 
   *User can go back to the homepage to create as many words as they'd like.
 
+  *go to https://shrouded-caverns-16357.herokuapp.com/ to try it out without cloning the github repository.
 
 ## Specifications
 * Create a word
