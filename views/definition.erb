@@ -1,0 +1,15 @@
+<h1>Add a Definition for <%= @word.word %> </h1>
+
+<ul>
+
+  <li><%= @word.definitions %></li>
+
+</ul>
+
+<form action="/newdef" method="post">
+  <label for="definition">New definition</label>
+    <input type="text" name="definition">
+  <button type="submit">Add a definition!</button>
+</form>
+
+<a href='/'>Home</a>

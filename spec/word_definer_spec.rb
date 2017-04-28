@@ -15,6 +15,14 @@ describe(Definition) do
     end
   end
 
+  describe("#save") do
+    it("pushes a definition to an array that holds all the definitions") do
+      test_word = Word.new({:word => "Hulk"})
+      test_word.save()
+      expect(Word.all()).to(eq([test_word]))
+    end
+  end
+
   describe(".all") do
     it("is empty at first") do
       expect(Definition.all()).to(eq([]))
