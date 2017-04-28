@@ -3,19 +3,11 @@ require('word')
 
 describe(Definition) do
   before() do
-    Definition.clear()
+    Word.clear()
   end
 
   describe("#save") do
-    it("pushes a definition to an array that holds all the definitions") do
-      test_definition = Definition.new({:definition_of_word => "A person who is really strong"})
-      test_definition.save()
-      expect(Definition.all()).to(eq([test_definition]))
-    end
-  end
-
-  describe("#save") do
-    it("pushes a definition to an array that holds all the definitions") do
+    it("pushes a word to an array that holds all the words") do
       test_word = Word.new({:word => "Hulk"})
       test_word.save()
       expect(Word.all()).to(eq([test_word]))
@@ -24,15 +16,15 @@ describe(Definition) do
 
   describe(".all") do
     it("is empty at first") do
-      expect(Definition.all()).to(eq([]))
+      expect(Word.all()).to(eq([]))
     end
   end
 
   describe(".clear") do
     it("empties the array that holds all the definitions") do
-      test_definition = Definition.new({:definition_of_word => "A person who is really strong."}).save()
-      Definition.clear()
-      expect(Definition.all()).to(eq([]))
+      test_definition = Word.new({:word => "Hulk"}).save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
     end
   end
 end
