@@ -35,3 +35,10 @@ class Word
     found_word
   end
 end
+
+class Definition
+  attr_reader(:definition)
+  def initialize(attributes)
+    @definition = attributes[:definition]
+  end
+end
